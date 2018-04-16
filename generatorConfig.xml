@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 数据库驱动 -->
+	<classPathEntry
+		location="E:\gxw\mysql-connector-java-5.1.24.jar"></classPathEntry>
+
+	<context id="context1">
+		<!-- 数据库的连接信息 -->
+		<jdbcConnection connectionURL="jdbc:mysql://localhost:3306/ris"
+			driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+		<!-- 实体类 -->
+		<javaModelGenerator targetPackage="com.lanou.entity"
+			targetProject="project/src/main/java" />
+
+		<!-- mapper.xml的生成 -->
+		<sqlMapGenerator targetPackage="com.lanou.mapper"
+			targetProject="project/src/main/java" />
+		<!-- mapper 接口 -->
+		<javaClientGenerator targetPackage="com.lanou.mapper"
+			targetProject="project/src/main/java" type="XMLMAPPER" />
+
+
+		<!-- 数据库表 tableName 表名 domainObjectName 类名 -->
+		<table tableName="xsxxb" domainObjectName="Student"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="kmcjb_$kmid$" domainObjectName="Kmcjb"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="kmffb_$kmid$" domainObjectName="Kmffb"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="kskmb" domainObjectName="Kskmb"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+	</context>
+</generatorConfiguration>
